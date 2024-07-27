@@ -17,23 +17,24 @@ def menu():
     print("3. Exit")
     print()
 
+
 if __name__ == '__main__':
     while True:
-
         menu()
-        option = int(input("Enter your choice: "))
+
+        option = int(input("Please enter an option: "))
 
         if option == 1:
             password = input("Please enter your password to encode: ")
-            password = encode(password)
+            encoded_password = encode(password)
 
             print("Your password has been encoded and stored!")
+            print()
 
         if option == 2:
-            print(f'The encoded password is: {password}, and the original password is {decode(password)}.')
+            print(
+                f'The encoded password is {encoded_password}, and the original password is {decode(encoded_password)}.')
+            print()
 
-
-
-
-
-
+        if option == 3:
+            exit()
